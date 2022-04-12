@@ -41,4 +41,4 @@ services:
          dockerfile: Dockerfile
       image: zabbix-cachet
       volumes:
-        - ./config.yml:/config.yml
+        - ./zabbix/config.yml:/config.yml
