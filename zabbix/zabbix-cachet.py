@@ -605,10 +605,10 @@ def triggers_watcher_worker(service_map, interval, event):
     @param event: treading.Event object
     @return:
     """
-    logging.info('Service Map {}'.format(service_map))
-    logging.info('Event {}'.format(event.__dict__))
-    logging.info('start trigger watcher')
-    event_counter = 0
+    #logging.info('Service Map {}'.format(service_map))
+    #logging.info('Event {}'.format(event.__dict__))
+    #logging.info('start trigger watcher')
+    #event_counter = 0
     while not event.is_set():
         event_counter += 1
         logging.debug('check Zabbix triggers')
@@ -621,7 +621,7 @@ def triggers_watcher_worker(service_map, interval, event):
                 logging.error(e, exc_info=True)
         else:
             logging.error('Zabbix is not available. Skip checking...')
-        logging.info('Completed sequence {}'.format(event_counter))
+        #logging.info('Completed sequence {}'.format(event_counter))
         time.sleep(interval)
     logging.info('end trigger watcher')
 
