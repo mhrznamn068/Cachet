@@ -34,3 +34,11 @@ services:
     depends_on:
       - postgres
     restart: on-failure
+
+  zabbix-cachet:
+      build:
+         context: ./zabbix-cachet
+         dockerfile: Dockerfile
+      image: zabbix-cachet
+      volumes:
+        - ./config.yml:/config.yml
