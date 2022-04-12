@@ -82,6 +82,9 @@ RUN wget https://getcomposer.org/installer -O /tmp/composer-setup.php && \
     php /tmp/composer-setup.php --version=$COMPOSER_VERSION --install-dir=bin && \
     php -r "unlink('/tmp/composer-setup.php');"
 
+RUN apk update && apk add tzdata
+ENV TZ=Asia/Kathmandu
+
 WORKDIR /var/www/html/
 USER 1001
 
