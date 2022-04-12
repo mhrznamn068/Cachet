@@ -610,7 +610,7 @@ def triggers_watcher_worker(service_map, interval, event):
     #logging.info('start trigger watcher')
     #event_counter = 0
     while not event.is_set():
-        event_counter += 1
+        #event_counter += 1
         logging.debug('check Zabbix triggers')
         # Do not run if Zabbix is not available
         if zapi.get_version():
