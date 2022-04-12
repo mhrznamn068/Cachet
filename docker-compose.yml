@@ -37,7 +37,7 @@ services:
 
   zabbix-cachet:
       build:
-         context: ./zabbix-cachet
+         context: ./zabbix
          dockerfile: Dockerfile
       image: zabbix-cachet
       volumes:
